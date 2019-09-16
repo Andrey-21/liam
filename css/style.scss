@@ -1,0 +1,240 @@
+$colorGray: #777777;
+$lightGrey: #EBEBEB;
+
+@mixin main-container {
+  margin: 0 auto;
+  max-width: 1130px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-font-smoothing: antialiased; }
+
+html {
+  height: 100%; }
+
+.main-inner {
+  padding: 40px 0;
+
+  .container {
+    @include main-container;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      margin-left: 20px;
+
+      .link {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        color: $colorGray;
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid transparent;
+        transition: .3s;
+
+        &:hover {
+          color: #000;
+          border-bottom-color: #000;
+        }
+      }
+    }
+
+    .search {
+      margin-left: 45px;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      font-size: 20px;
+      color: $colorGray;
+      cursor: pointer;
+    }
+  }
+}
+
+.slider {
+
+
+  .first-slide {
+    background: url("../images/slider-img.png") center center no-repeat;
+    background-size: cover;
+    min-height: 650px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .slider-title {
+      text-align: center;
+      color: #fff;
+      font-size: 38px;
+      text-transform: uppercase;
+      background-color: #000;
+      max-width: 700px;
+      letter-spacing: 10px;
+      padding: 15px 45px;
+      margin-bottom: 38px;
+      font-family: 'Roboto-light', sans-serif;
+    }
+
+    .slider-title-small {
+      font-size: 20px;
+      letter-spacing: 10px;
+      font-family: 'Roboto-light', sans-serif;
+    }
+  }
+
+  .owl-carousel .owl-nav button.owl-prev{
+    position: absolute;
+    left: 70px;
+    top: 45%;
+    font-size: 30px;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    border: #fff solid 1px;
+    border-radius: 50%;
+    outline: none;
+
+  }
+
+  .owl-carousel.owl-loaded {
+
+    .owl-dots {
+      display: none;
+    }
+  }
+
+  .owl-carousel .owl-nav button.owl-next{
+    position: absolute;
+    right: 70px;
+    top: 45%;
+    font-size: 30px;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    border: #fff solid 1px;
+    border-radius: 50%;
+    outline: none;
+  }
+}
+
+.services {
+  padding-top: 35px;
+  padding-bottom: 75px;
+  background-color: #FAFAFA;
+
+  .container{
+    @include main-container;
+
+    .menu-block {
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $colorGray;
+      border-top: 1px solid $colorGray;
+      margin-bottom: 40px;
+
+      .zing {
+        list-style: none;
+        margin-right: 40px;
+
+        .services-link {
+          text-decoration: none;
+          text-transform: uppercase;
+          color: $colorGray;
+          font-size: 18px;
+          padding: 0 10px 5px 10px;
+          border-bottom: 2px solid transparent;
+          transition: .3s;
+
+          &:hover {
+            color: #000;
+            border-bottom-color: #000;
+          }
+        }
+      }
+    }
+    .services-portfolio {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+
+      .portfolio-photo {
+        display: flex;
+        flex-direction: column;
+
+        .portfolio-img {
+          margin-bottom: 25px;
+
+        }
+      }
+    }
+  }
+
+  .btn {
+    padding: 20px 25px;
+    background-color: #959595;
+    color: #FFFFFF;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+footer {
+  padding-top: 65px;
+  padding-bottom: 45px;
+  box-shadow: 0px -3px 4.75px 0.25px rgba(163, 163, 163, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .footer-logo {
+    padding-bottom: 60px;
+  }
+
+  .footer-social {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid $lightGrey;
+    border-top: 1px solid $lightGrey;
+    padding: 25px 0;
+    margin-bottom: 40px;
+    
+    .social-icon {
+      text-decoration: none;
+      color:  $colorGray;
+      font-size: 18px;
+      margin-right: 60px;
+    }
+  }
+  .footer-text {
+
+    span {
+      color: $colorGray;
+
+      b {
+        color: #000;
+      }
+    }
+  }
+}
+
+
+
